@@ -1,0 +1,21 @@
+<div class="container p-3">
+  <div class="row card-deck">
+    <div class="col-3" *ngFor="let m of movies">
+      <a href="#" routerLink="/movies/details/{{m.id}}"><img
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{m.poster_path}}" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <!-- @Todo: Add slice only if string length is greater than 20  -->
+        <!-- @Todo: Use Relative routing -->
+        <a href="#" routerLink="/movies/details/{{m.id}}">
+          <h5 class="card-title">{{ m.title | slice:0:20 }}...</h5>
+        </a>
+        <!-- @Todo: Add slice only if string length is greater than 120  -->
+        <p class="card-text">{{m.overview | slice:0:120 }}...</p>
+        <!-- @Todo: Use Relative routing -->
+        <a href="#" class="btn" routerLink="/movies/details/{{m.id}}">More Info</a>
+      </div>
+    </div>
+  </div>
+  <ngb-pagination class="d-flex justify-content-center pt-3" [collectionSize]="collectionSize" [pageSize]="pageSize"
+    [(page)]="page" [maxSize]="5" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+</div>

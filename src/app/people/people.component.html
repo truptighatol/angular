@@ -1,0 +1,17 @@
+<div class="container p-3">
+  <div class="row card-deck">
+    <div class="col-3" *ngFor="let p of people">
+      <a href="#" routerLink="/person/{{p.id}}">
+        <!-- @Todo: Get this base URL from config -->
+        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{p.profile_path}}" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <!-- @Todo: Add slice only if string length is greater than 20  -->
+        <a href="#" routerLink="/person/{{p.id}}">
+          <h5 class="card-title">{{ p.name | slice:0:20 }}...</h5>
+        </a>
+      </div>
+    </div>
+  </div>
+  <ngb-pagination class="d-flex justify-content-center pt-3" [collectionSize]="collectionSize" [pageSize]="pageSize"
+    [(page)]="page" [maxSize]="5" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+</div>
