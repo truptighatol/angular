@@ -1,5 +1,19 @@
 # Movies
 
+## Views list
+ - Paginated Movies List view
+ - Movie Details view
+ - Paginated People list view
+ - Person details view
+ 
+## Known issues
+- No error handling in case of API failure
+- No relative routing
+- Broken image getting displayed at first load of details page
+- No error login in interceptor 
+- No auth protectors
+- Search not yet implemented
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
 
 ## Development server
