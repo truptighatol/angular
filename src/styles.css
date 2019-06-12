@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+/* Smart girl TRUPTI*/
 .card-horizontal {
   display: flex;
   flex: 1 1 auto;
@@ -7,3 +8,5 @@
 .card-body {
   box-shadow: 0 30px 40px rgba(0, 0, 0, .1)
 }
+
+
